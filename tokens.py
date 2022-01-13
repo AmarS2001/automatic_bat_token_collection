@@ -2,14 +2,14 @@ from selenium import webdriver
 import os
 import random
 import time
-
+## Close the browser and execute this code...
 print("started....")
-driver_path = "./chromedriver.exe"
-brave_path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+driver_path = "./chromedriver.exe"   ## add chromedriver.exe path
+brave_path = "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"   ## add brave applecation path and this path might be different in your case so please ensure....
 
 option = webdriver.ChromeOptions()
 option.binary_location = brave_path
-option.add_argument("--user-data-dir=C:/Users/vinayaka s sajjan/AppData/Local/BraveSoftware/Brave-Browser/User Data")
+option.add_argument("--user-data-dir=C:/Users/<User name>/AppData/Local/BraveSoftware/Brave-Browser/User Data")  ## add user name in <User name> field and this path might be different in your case so please ensure....
 #option.add_argument("--incognito")
 # option.add_argument("--headless") OPTIONAL
 
@@ -25,6 +25,7 @@ browser.close()
 
 browser.switch_to.window(browser.window_handles[0]) '''
 
+# you can add your own links in the dictonary...
 urls = {
 0 : "https://www.google.com",
 1 : "https://shop.ledger.com/products/ledger-nano-s?r=0ba5d7199327",
